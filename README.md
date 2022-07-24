@@ -1,5 +1,11 @@
 # factory-shop-gh-pages
 
-There are compiled assets to publish via Github Pages.
+There is a website to publish via Github Pages.
 
-It is an example of a static website for an imaginary local shop. You can buy food, the stuff for house remodelling and a lot of things here.
+It is an example of a static website for an imaginary local shop. You can buy food, the stuff for house remodeling and a lot of things here. 
+
+The website was created using CSS, HTML and JavaScript. No bundlers were used. There are a lot custom SVG images under the hood. Hope they create a good user experience.
+
+The UI is fully responsive. It fits desktop, tablet and mobile devices' screens.
+
+I would rather use Parcel.js and SASS for such kind of work today! :-)
