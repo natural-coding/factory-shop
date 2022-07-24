@@ -1,6 +1,6 @@
 # factory-shop-gh-pages
 
-There is a website to publish via Github Pages.
+There is a website to publish via Github Pages. The site is available at [https://natural-coding.github.io/factory-shop](https://natural-coding.github.io/factory-shop)
 
 It is an example of a static website for an imaginary local shop. You can buy food, the stuff for house remodeling and a lot of things here. 
 
