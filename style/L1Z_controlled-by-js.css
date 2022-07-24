@@ -1,0 +1,13 @@
+/**************************************************************************
+*   Element styles that set from JS
+**************************************************************************/
+   /**************************************************************************
+   *   *header
+   **************************************************************************/
+         header > nav > div.menu-narrow-screen-button > div.menu-narrow-screen {
+            display: block;
+         }
+
+         header > nav > .menu-narrow-screen-button > .menu-narrow-screen.dontshow {
+            display: none;
+         }

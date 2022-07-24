@@ -1,0 +1,57 @@
+/**************************************************************************
+*   Tricky styles for 'tear-off' information under the site's header
+**************************************************************************/
+   /**************************************************************************
+   *   underheader
+   **************************************************************************/
+      section.underheader > span.tear-off-info {
+         position: relative;
+         z-index: 1;
+      }
+
+      section.underheader > span.tear-off-info::before {
+         content: ''; /* To generate the box */
+         
+         position: absolute;
+         top: 0; right: 0; bottom: 0; left: 0;
+         
+         z-index: -1;
+         
+         border-style: solid;
+         border-width: var(--tear-off-border-width);
+         border-top: none;
+         border-radius: 0 0 var(--main-border-radius) var(--main-border-radius);
+         
+         background-color: #E5CCCC;
+         background-color: #4D4D4D;
+         background-color: #666;
+         background-color: #737373;
+         background-color: #8C8C8C;
+         background-color: #808080;
+         background-color: var(--tear-off-bg-color);
+         border-color: var(--tear-off-border-color);
+         
+         transform-origin: top;  
+      }
+
+      /* some tweaks as we do not use SVG! ;-) */
+      section.underheader > span.tear-off-info.mobile-number::before {
+         transform: scale(1, 1.2) perspective(.5em) rotateX(-3deg);
+      }
+
+      section.underheader > span.tear-off-info.businesshours::before {
+         transform: scale(1, 1.15) perspective(.5em) rotateX(-2.5deg);
+      }
+
+
+
+
+
+
+
+
+
+
+
+
+

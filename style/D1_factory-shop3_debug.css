@@ -1,0 +1,59 @@
+/**************************************************************************
+*   Temp stuff to 'debug' CSS
+**************************************************************************/
+   /**************************************************************************
+   *   *Borders for L1
+   **************************************************************************/
+      :root > body > * {
+         border: 3px solid green;
+      }
+
+         header > * {
+            border: 3px solid green;
+         }
+
+         section.goods-promo > * {
+            border: 3px solid green;
+         }
+
+         section.welcome-message > * {
+            border: 3px solid green;
+         }
+         
+         footer > * {
+            border: 3px solid green;
+         }
+
+/*         footer  .twirl-pattern {
+            border: 3px solid green;
+         }
+*/
+   /**************************************************************************
+   *   Dimensions, margins and paddings
+   **************************************************************************/
+      :root > body > * {
+         height: 25vh;
+         margin-bottom: 2rem;
+      }
+
+   /**************************************************************************
+   *   Individual items tuning
+   **************************************************************************/
+      header {
+         height: 2rem !important;
+         margin-bottom: initial !important;
+      }
+      section.goods-promo, section.welcome-message, footer, section.underheader {
+         height: initial !important;
+      }
+
+   /**************************************************************************
+   *   Extra styles reset
+   **************************************************************************/
+      :root > body > a {
+         border: initial;
+         height: initial;
+         margin: initial;
+      }
+
+

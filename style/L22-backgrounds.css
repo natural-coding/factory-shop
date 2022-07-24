@@ -1,0 +1,104 @@
+/**************************************************************************
+*   Logo
+**************************************************************************/
+   /**************************************************************************
+   *   *header
+   **************************************************************************/
+      header > .shop-logo svg {
+         width: 100%;
+         display: block;
+      }
+
+
+/**************************************************************************
+*   *Bitmap
+**************************************************************************/
+   /**************************************************************************
+   *   *bgoods-promo
+   **************************************************************************/
+      section.goods-promo > .pic-placeholder {
+         background-repeat: no-repeat;
+         background-position: center center;
+         background-size: cover;
+      }
+
+      section.goods-promo > .pic-placeholder:nth-child(1) {
+
+         background-image:
+            url('../assets/bitmap/goods-promo/food/dairy-products.png'),
+            url('../assets/svg/patterns/Large-Triangles_pic-background.svg');
+      }
+
+      section.goods-promo > .pic-placeholder:nth-child(2) {
+
+         background-image: 
+            url('../assets/bitmap/goods-promo/gardening/tree-watering_boy_watercan.png'),
+            url('../assets/svg/patterns/Large-Triangles_pic-background.svg');
+      }
+
+      section.goods-promo > .pic-placeholder:nth-child(3) {
+
+         background-image: 
+            url('../assets/bitmap/goods-promo/school_n_office/notebook-pencil-eraser_scaled_down.png'),
+            url('../assets/svg/patterns/Large-Triangles_pic-background.svg');
+
+      }
+
+      section.goods-promo > .pic-placeholder:nth-child(4) {
+
+         background-image: 
+            url('../assets/bitmap/goods-promo/house_construction/worker.png'),
+            url('../assets/svg/patterns/Large-Triangles_pic-background.svg');
+
+      }
+
+      section.goods-promo > .pic-placeholder:nth-child(5) {
+
+         background-image: 
+            url('../assets/bitmap/goods-promo/house_construction/self-repairment-house.png'),
+            url('../assets/svg/patterns/Large-Triangles_pic-background.svg');
+
+      }
+
+   /**************************************************************************
+   *   *welcome-message
+   **************************************************************************/
+      .welcome-message > .pics-block > .pic-welcome {
+         background-repeat: no-repeat;
+         background-position: center center;
+         background-size: cover;
+      }
+      .welcome-message > .pics-block.left > .pic-welcome {
+         background-image: url('../assets/bitmap/welcome/factory-shop-entrance.jpg');
+      }
+      .welcome-message > .pics-block.right > .pic-welcome {
+         background-image: url('../assets/bitmap/welcome/factory-shop-inside.jpg');
+      }
+   /**************************************************************************
+   *   *footer
+   **************************************************************************/
+      footer > .map {
+         background-image: url('../assets/svg/patterns/Large-Triangles_pic-background.svg');
+      }
+
+      footer > .you-finished-reading-pic {
+         background-image: url('../assets/bitmap/footer/grocery-store-bag.png'),
+            url('../assets/svg/patterns/Large-Triangles_pic-background.svg');
+         
+         background-repeat: no-repeat;
+         background-position: center center;
+         background-size: cover;
+      }
+
+
+
+
+/**************************************************************************
+*   SVG
+**************************************************************************/
+
+
+
+
+
+

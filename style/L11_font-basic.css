@@ -1,0 +1,49 @@
+/**************************************************************************
+*   Theory
+**************************************************************************/
+   /*=====================================================================
+   *  Font sizes (see doc/font-sizes*.txt for details)
+      ----------
+         Desktop (min-width: 640px)
+            body, text: Regular  21px
+            step: 2pt => 2/21px = 0.1rem
+            
+            heading3: bold, 1.6rem
+            small2: 0.9rem
+   ======================================================================*/
+/**************************************************************************
+*   Size
+**************************************************************************/
+   :root {
+      font-size: 21px; /*16px by default*/
+   }
+/*
+      h3 -> 1.6rem
+      h2 -> 1.7rem
+      h1 -> 1.8rem
+      
+      step equals 2pt for each new size
+      2/21 ~ 0.1
+*/      
+      h1 {
+         /* Reminder: decrease font-size by 1 step for sans-serif fonts */
+         font-size: 1.8rem;
+      }
+
+      .tear-off-info {
+         font-size: 0.9rem;
+      }
+/**************************************************************************
+*   Families and weights
+**************************************************************************/
+   h1,h2,h3 {
+      font-family: serif;
+   }
+
+   .welcome-message > .welcome-text-wrapper > .welcome-text > p.first::first-line {
+      font-weight: bold;
+   }
+
+   .welcome-message > .welcome-text-wrapper > .welcome-text > p > span.good-bye {
+      font-weight: bold;
+   }

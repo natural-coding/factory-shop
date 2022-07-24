@@ -1,0 +1,19 @@
+/**************************************************************************
+*   Visual design for paragraphs of *text
+**************************************************************************/
+   /**************************************************************************
+   *   *twelcome-message
+   **************************************************************************/
+      .welcome-message > .welcome-text-wrapper > .welcome-text > p.first::first-line {
+         color: var(--text-emphasis-color);
+         
+         letter-spacing: 0.2rem;
+         line-height: 1.2rem;
+      }
+
+      .welcome-message > .welcome-text-wrapper > .welcome-text > p > span.good-bye {
+         color: var(--text-emphasis-color);
+      }
+
+
+

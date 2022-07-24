@@ -1,0 +1,77 @@
+/**************************************************************************
+*   All the WIREFRAME styles for DOM tree items that are outside the flow
+*  + creating positioning contexts for them
+**************************************************************************/
+/**************************************************************************
+*   CSS variables
+**************************************************************************/
+   :root {
+      --otear-off-border-width: 0.1rem;
+      --osmall-border-radius: 0.2rem;
+      --otear-off-border-width: thin;
+      --omain-border-style: solid;
+   }
+
+/**************************************************************************
+*   *Positioning contexts and dimensions
+**************************************************************************/
+   /**************************************************************************
+   *   *pheader
+   **************************************************************************/
+      header > nav > .menu-narrow-screen-button {
+         position: relative;
+      }
+         header > nav > .menu-narrow-screen-button > .menu-narrow-screen {
+            position: absolute;
+            right: 0;
+            top: 100%;
+         }
+
+   /**************************************************************************
+   *   *pfooter
+   **************************************************************************/
+      /* Bug with iframe border-radius quick fix (Chrome) */
+      footer > .map {
+         position: relative;
+         overflow: hidden;
+      }
+
+
+/**************************************************************************
+*   Wireframe design
+**************************************************************************/
+   /**************************************************************************
+   *   *wheader
+   **************************************************************************/
+      header > nav > .menu-narrow-screen-button {
+         padding: 0 15%;
+         
+         border: var(--otear-off-border-width) var(--omain-border-style);
+         border-radius: var(--osmall-border-radius);
+         
+         cursor: pointer;
+      }
+         header > nav > .menu-narrow-screen-button > .menu-narrow-screen {
+            border: var(--otear-off-border-width) var(--omain-border-style);
+            border-radius: var(--osmall-border-radius);
+         }
+            header > nav > .menu-narrow-screen-button > .menu-narrow-screen 
+            > ul.menu-items
+            {
+               text-align: right;
+               margin: 0.2rem 0;
+            }
+               header > nav > .menu-narrow-screen-button > .menu-narrow-screen 
+               > ul.menu-items > li + li
+               {
+                  border-top: var(--otear-off-border-width) var(--omain-border-style);
+               }
+
+                  header > nav > .menu-narrow-screen-button > .menu-narrow-screen 
+                  > ul.menu-items > li a 
+                  {
+                     display: block; /* just to tap it fine, you know ;-) */
+                     padding: 0.2rem 1rem;
+                     text-decoration: none;
+                     user-select: none;
+                  }

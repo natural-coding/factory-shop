@@ -1,0 +1,441 @@
+/**************************************************************************
+*   'Global' styles
+**************************************************************************/
+   * {
+      box-sizing: border-box;
+   }
+
+/**************************************************************************
+*   CSS variables
+**************************************************************************/
+   :root {
+      /* === global === */
+      --main-border-width: thin;
+      --main-border-style: solid;
+      --main-border-radius: 0.5rem;
+       
+      /* === header === */
+      --shop-logo-w: 250px;
+      --spring-decoration-h: 21px;
+      --menu-narrow-screen-button-wh: 1.7rem;
+       
+      /* goods-promo */
+      --pic-placeholder-size: 266px;
+          
+      /* === welcome-message === */
+      --welcome-text-flex-width: 23.2rem; 
+      --pic-welcome-flex-wh: 266px;
+      --pic-welcome-decoration-flex-w: 100%; /* because it is cruicial for flex layout */
+      --pic-welcome-decoration-h: 112px;
+      
+      /* === footer === */
+      --contact-info-flex-w: 15rem;
+      --you-finished-reading-pic-flex-wh: 266px;
+      
+   }
+
+/**************************************************************************
+*   *Sections' and body margins
+**************************************************************************/
+   body {
+      margin-top: 1rem;
+      margin-bottom: 1rem;
+   }
+
+   section.goods-promo {
+      margin-top: 0.5rem;
+   }
+
+   section.welcome-message {
+      margin-top: 1rem;
+      margin-bottom: 1rem;
+   }
+
+
+
+/**************************************************************************
+*   *Flexible boxes layout
+**************************************************************************/
+   /**************************************************************************
+   *  *fheader
+   **************************************************************************/
+      header {
+         display: flex;
+         justify-content: space-between;
+         align-items: center;
+      }
+         header > .shop-logo {
+            /* Rule is here as we force align flex-items */ 
+            margin-bottom: 0.2rem;
+         }
+         header > .spring-decoration {
+            flex: 1;
+            align-self: flex-end;
+         }
+         header > nav {
+            display: flex;
+            align-items: center;
+         }
+
+   /**************************************************************************
+   *  *fgoods-promo
+   **************************************************************************/
+      section.goods-promo {
+         display: flex;
+         justify-content: space-around;
+      }
+   /**************************************************************************
+   *  *fwelcome-message
+   **************************************************************************/   
+      .welcome-message {
+         display: flex;
+         justify-content: center;
+      }
+         .welcome-message > .narrow-screen-decoration {
+            flex: 1;
+         }
+         .welcome-message > .welcome-text-wrapper {
+            flex: 0 0 var(--welcome-text-flex-width);
+         }
+         .welcome-message > .pics-block {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-content: space-around;
+            flex-wrap: wrap;
+         }
+            .welcome-message > .pics-block > .pic-welcome {
+               flex: 0 0 var(--pic-welcome-flex-wh);
+               height: var(--pic-welcome-flex-wh);
+            }
+
+            .welcome-message > .pics-block > .pic-welcome-decoration {
+               width: var(--pic-welcome-decoration-flex-w);
+               flex-wrap: wrap;
+            }
+   /**************************************************************************
+   *  *ffooter
+   **************************************************************************/   
+      footer {
+         display: flex;
+         justify-content: space-around;
+      }
+         footer > .contact-info {
+            flex: 0 0 var(--contact-info-flex-w);
+         }
+
+         footer > .map {
+            flex: 1;
+         }
+
+         footer > .you-finished-reading-pic {
+            flex: 0 0 var(--you-finished-reading-pic-flex-wh);
+            height: var(--you-finished-reading-pic-flex-wh);
+         }
+      /**************************************************************************
+      *   [Media queries] -> [display]
+      **************************************************************************/
+         @media (max-width: 1279px) {
+            footer {
+               flex-wrap: wrap;
+            }
+         }
+
+/**************************************************************************
+*   *Width, height, margins, paddings, borders
+**************************************************************************/
+   /**************************************************************************
+   *   *wglobal
+   **************************************************************************/
+      body {
+         padding: 0 5vw;
+         padding-top: 0.8rem;
+      }
+
+      header, section.goods-promo, section.welcome-message, footer {
+        border-radius: var(--main-border-radius);
+      }
+
+   /**************************************************************************
+   *   *wheader
+   **************************************************************************/
+      /* Remember, remember the fifth of November... (underlined)
+       Remember about D1 debug styles and selector specificity */
+      :root > body > header {
+         /* for our wonderful tear-off elements! :-) */
+         border-bottom: var(--main-border-width) var(--main-border-style) !important;
+      }
+
+      header {
+         padding: 0.7rem;
+      }
+         header > .shop-logo {
+            width: var(--shop-logo-w);
+            
+            /* See *flex section for margin-bottom property ;-) */
+         }
+
+         header > .spring-decoration {
+            height: var(--spring-decoration-h);
+            margin-bottom: 0.5rem;
+            margin-left: 0.5rem;
+            margin-right: 0.3rem;
+         }
+
+
+         header > nav > .menu-wide-screen > ul.menu-items > li {
+            padding: 0.3rem;
+         }
+
+         header > nav > .menu-wide-screen > ul.menu-items > li + li {
+            margin-left: 0.2rem;
+         }
+
+
+         header > nav > .menu-narrow-screen-button {
+            width: var(--menu-narrow-screen-button-wh);
+            height: var(--menu-narrow-screen-button-wh);
+         }
+      
+
+   /**************************************************************************
+   *   *wunderheader
+   **************************************************************************/
+      section.underheader {
+         border: none;
+      }
+         section.underheader > span.tear-off-info {
+            padding: .3em 1em 0em;
+         }
+
+         section.underheader > span.tear-off-info:first-child {
+            margin-left: 0.4rem;
+         }
+
+         section.underheader > span.tear-off-info + span.tear-off-info  {
+            margin: 0 -.3rem; /*for trapezoids tabs :-)*/
+         }
+
+
+   /**************************************************************************
+   *   *wgoods-promo
+   **************************************************************************/
+      section.goods-promo {
+         padding: 1rem 0;
+      }
+
+         section.goods-promo > .pic-placeholder {
+            width: var(--pic-placeholder-size);
+            height: var(--pic-placeholder-size);
+            border-radius: var(--main-border-radius);
+         }
+   /**************************************************************************
+   *   *wwelcome-message
+   **************************************************************************/
+      .welcome-message > .pics-block {
+         padding-bottom: 1rem;
+      }
+         .welcome-message > .welcome-text-wrapper > .welcome-text {
+            padding: 0;
+            padding-left: 1rem;
+            padding-right: 1rem;
+            padding-bottom: 1rem;
+         }
+
+            .welcome-message > .welcome-text-wrapper > .welcome-text > p.good-bye {
+               margin-top: 0.2rem;
+            }
+
+
+         .welcome-message > .pics-block > .pic-welcome-decoration {
+            height: var(--pic-welcome-decoration-h);
+            margin: 0.5rem 5%;
+            margin-bottom: 1rem;
+         }
+
+         .welcome-message > .pics-block > .pic-welcome {
+            border: var(--main-border-width) var(--main-border-style);
+            border-radius: var(--main-border-radius);
+         }
+
+
+   /**************************************************************************
+   *   *wfooter
+   **************************************************************************/
+      footer {
+         padding: 0 0.7rem 0.7rem;
+      }
+
+      footer > * {
+         margin-top: 0.7rem;
+         border-radius: var(--main-border-radius);
+      }
+
+      footer > * + * {
+         margin-left: 0.7rem;
+      }
+
+      footer > .contact-info {
+         padding-left: 1rem;
+         padding-right: 1rem;
+         padding-top: 1rem;
+
+         border: var(--main-border-width) var(--main-border-style);
+      }
+      footer > .contact-info > .twirl-pattern {
+         width: 25%;
+         margin: auto;
+         margin-top: 1rem;
+         margin-bottom: 0.5rem;
+      }
+
+      footer > .map {
+         min-width: var(--contact-info-flex-w);
+         max-width: calc(1.5 * var(--contact-info-flex-w)); /* golden ratio! ;-) */
+
+         /* for using in flex-wrap further */
+         height: var(--you-finished-reading-pic-flex-wh);
+
+         border: var(--main-border-width) var(--main-border-style);
+      }
+      
+         .map > iframe {
+            width: 100%;
+            height: 100%;
+         }
+
+
+/**************************************************************************
+*   *Display modes, visibility
+**************************************************************************/
+   /**************************************************************************
+   *  *dheader
+   **************************************************************************/
+      header > .shop-logo > a {
+         display: block;
+      }
+      /**************************************************************************
+      *  Desktop menu
+      **************************************************************************/
+         header > nav > div.menu-wide-screen > ul.menu-items > li {
+            /* Make them block level to add their sizes to the
+            parents' element height. Thanks to Keith Grant! :-) */
+            display: inline-block;
+         }
+
+      /**************************************************************************
+      *  Global menu setup
+      **************************************************************************/
+         header > nav > div.menu-wide-screen {
+            display: block;
+         }
+
+         header > nav > div.menu-narrow-screen-button {
+            display: none;
+         }
+
+         @media(max-width:755px) {
+            header > nav > div.menu-wide-screen {
+               display: none;
+            }
+
+            header > nav > div.menu-narrow-screen-button {
+               display: block;
+            }
+         }         
+
+   /**************************************************************************
+   *   *dunderheader
+   **************************************************************************/
+      section.underheader > span.tear-off-info {
+         /* Make them block level to add their sizes to the
+         parents' element height. Thanks to Keith Grant! :-) */
+         display: inline-block;
+      }
+
+   /**************************************************************************
+   *  *dgoods-promo
+   **************************************************************************/
+      /**************************************************************************
+      *   [Media queries] -> [display]
+      **************************************************************************/
+         @media (min-width: 1680px) {
+            section.goods-promo > .pic-placeholder:nth-child(n+6) {
+               display: none;
+            }
+         }
+
+         @media (max-width: 1679px) {
+            section.goods-promo > .pic-placeholder:nth-child(n+5) {
+               display: none;
+            }
+         }
+
+         @media (max-width: 1279px) {
+            section.goods-promo > .pic-placeholder:nth-child(n+4) {
+               display: none;
+            }
+         }
+
+         @media (max-width: 959px) {
+            section.goods-promo > .pic-placeholder:nth-child(n+3) {
+               display: none;
+            }
+         }
+
+         @media (max-width: 639px) {
+            section.goods-promo > .pic-placeholder:nth-child(n+2) {
+               display: none;
+            }
+         }
+
+   /**************************************************************************
+   *   *dwelcome-message
+   **************************************************************************/
+      /**************************************************************************
+      *   [Media queries] -> [display]
+      **************************************************************************/
+         @media (max-width: 1279px) {
+            section.welcome-message > .pics-block.left {
+               display: none;
+            }
+         }
+
+         @media (max-width: 959px) {
+            section.welcome-message > .pics-block {
+               display: none;
+            }
+         }
+
+      @media (min-width: 960px) {
+         section.welcome-message > .narrow-screen-decoration {
+            display: none;
+         }
+      }
+
+      @media (max-width: 700px) {
+         section.welcome-message > .narrow-screen-decoration {
+            display: none;
+         }
+      }
+
+
+   /**************************************************************************
+   *   *dfooter
+   **************************************************************************/
+      /**************************************************************************
+      *   [Media queries] -> [display]
+      **************************************************************************/
+         @media (max-width: 1279px) {
+            footer > .you-finished-reading-pic {
+               display: none;
+            }
+         }
+
+
+
+
+
+
+
+

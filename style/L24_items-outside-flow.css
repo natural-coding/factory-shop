@@ -1,0 +1,32 @@
+/**************************************************************************
+*   All the VISUAL styles for DOM tree items that are outside the flow
+**************************************************************************/
+   /**************************************************************************
+   *   *vheader
+   **************************************************************************/
+      header > nav > .menu-narrow-screen-button {
+         background-color: var(--tear-off-bg-color);
+         border-color: var(--tear-off-border-color);
+      }
+
+         header > nav > .menu-narrow-screen-button svg {
+            width: 100%;
+            height: 100%;
+            
+            fill: var(--mobile-menu-fill);
+         }
+
+      header > nav > .menu-narrow-screen-button > .menu-narrow-screen {
+         background-color: var(--tear-off-bg-color);
+         border-color: var(--tear-off-border-color);
+      }
+      
+
+
+
+
+
+
+
+
+
